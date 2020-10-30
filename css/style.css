@@ -266,6 +266,64 @@ img{
 
 }
 
+.games-live, .games-coming{
+
+    display: flex;
+    align-items: center;
+    font-size: 1.875em;
+    color: white;
+
+}
+
+.match{
+
+    width: 9.5em;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+
+}
+
+.team1, .team2{
+
+    display: flex;
+    align-items: center;
+
+}
+
+.match img{
+
+    width: 1.8em;
+
+}
+
+.team1 img{
+
+    margin-left: 0.5em;
+
+}
+
+.team1 p{
+
+    padding-left: 0.4em;
+
+}
+
+.team2 img{
+
+    margin-right: 0.5em;
+
+}
+
+.line{
+
+    border: solid 1px;
+    height: 65%;
+    color: white;
+
+}
+
 /* Até 1199px  */
 
 @media screen and (max-width: 74.93em){
