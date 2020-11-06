@@ -185,7 +185,7 @@ img{
 
 .games img{
 
-    width: 190px;
+    width: 100%;
 
 }
 
@@ -365,7 +365,7 @@ img{
 
 .bloco-news1{
 
-    width: 90%;
+    width: 95%;
     margin-bottom: 4%;
     display: flex;
     flex-direction: row;
@@ -375,7 +375,7 @@ img{
 
 .bloco-news2{
 
-    width: 90%;
+    width: 95%;
     margin-bottom: 4%;
     display: flex;
     flex-direction: row;
@@ -385,7 +385,8 @@ img{
 
 .news-bloco{
 
-    width: 13em;
+    width: 30%;
+    max-width: 12em;
     height: 22.87em;
     background: linear-gradient(180deg, #000000 0%, rgba(83, 83, 83, 0.577381) 25%, rgba(196, 196, 196, 0) 87.5%);
     box-shadow: 1px 1px 20px 4px #000000;
@@ -574,12 +575,156 @@ img{
 
 @media screen and (max-width: 74.93em){
 
+    .header-top img{
+
+        width: 250px;
+        padding-left: 20px;
+
+    }
+
+    .menu{
+
+        font-size: 18px;
+        justify-content: space-around;
+
+    }
+
+    .banner-text{
+
+        font-size: 70%;
+
+    }
+
+    .content ul{
+
+        margin: 20px;
+        
+    }
+
+    .games img{
+
+        width: 80%;
+
+    }
+
+    .text-about{
+
+        font-size: 75%;
+
+    }
+
+    .content-about img{
+
+        width: 70%;
+        margin: 15px;
+
+    }
+
+    .games2 > .flex-spbt-center{
+
+        flex-direction: column;
+
+    }
+
+    .games2{
+
+        height: 12em;
+
+    }
+
+    .line{
+
+        border: 0;
+
+    }
+
+    .games-coming{
+
+        margin-bottom: 10px;
+
+    }
+
+    .text-bloco p{
+
+        font-size: 13px;
+
+    }
+
+    .links{
+
+        font-size: 13px;
+
+    }
+
+    .logo-rodape{
+
+        width: 30%;
+        padding-right: 20px;
+
+    }
+
+    .sociais{
+
+        font-size: 13px;
+        width: 30%;
+        padding-right: 20px;
+
+    }
+
 }
 
 /* Até 991px */
 
 @media screen and (max-width: 61.93em){
     
+    .header-top > .flex-spbt-center{
+
+        flex-direction: column;
+        padding-top: 20px;
+
+    }
+
+    .header-top{
+
+        height: 8em;
+
+    }
+
+    .header-top img{
+
+        padding-left: 0;
+
+    }
+
+    .banner-text{
+
+        font-size: 12px;
+
+    }
+
+    .text-about{
+
+        font-size: 12px;
+        padding-top: 26px;
+
+    }
+
+    .content-about img{
+
+        width: 60%;
+
+    }
+
+    .games2 h2{
+
+        font-size: 30px;
+
+    }
+
+    .content-news{
+        display: unset;
+    }
+
 }
 
 /* Até 767px */
