@@ -1,54 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
 
-/* Variaveis */
-
-:root{
-
-    --background: #838383
-    --red: #C60000
-    --blue: #001F70
-    --gradient: linear-gradient(180deg, #000000 0%, rgba(83, 83, 83, 0.577381) 25%, rgba(196, 196, 196, 0) 87.5%);
-    --font: 'Titillium Web', sans-serif;
-
-}
-
 *{
-
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
+}
 
+:root{
+
+    --background: #000000;
+    --red: #C20000;
+    --blue: #001F70;
+    --gradient:linear-gradient( #000000 0%, rgba(83, 83, 83, 0.577381) 25%, rgba(196, 196, 196, 0) 87.5%);
+
+    --font: 'Titillium Web', sans-serif;
+       
 }
 
 body{
-
-    background-color: rgb(60, 65, 70);
+    background-color: var(--background);
     font-family: var(--font);
-    font-size: 16px;
-
 }
 
-img{
-
+header{
     width: 100%;
-
-}
-
-.header-top{
-
-    /* background-color: violet; */
-    width: 100%;
+    padding: 10px 20px;
+    background-color: var(--background);
+    position: fixed;
+    top: 0;
+    z-index: 998;
     height: 5em;
+  
 }
 
-.content{
+.navbar{
+    max-width: 1200px;
+    /* border: solid 2px white; */
+    margin: 0 auto;
+    height: 4.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
 
-    /* background-color: skyblue; */
-    width: 100%;
-    max-width: 75em;
-    height: 100%;
-    margin: auto;
+.logo{
+    width:20em;
+    height:10em;
+    z-index:9999;
+    text-align: center;
+}
+
+.logo:hover{
+   transform: scale(1.1);
+   transition: 0.5s;
+   
+}
+
+
+.rodape-cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.hamburger{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 0;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger:after{
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    width: 70%;
+    height: 5%;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.hamburger:before{
+    content: "";
+    position: absolute;
+    top: 55%;
+    left:15%;
+    width: 70%;
+    height: 5%;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.hamburger:hover{
+    background-color: var(--red);
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.menu li{
+    margin-left: 10px;
+    
+}
+
+.menu a{
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    font-family:'Titillium Web', sans-serif;
+    
+    
+}
+
+.menu a:hover{
+    background-color: var(--red);
+    transition: 0.3s ease;
+    border-radius: 5px;
+    
 
 }
 
@@ -57,48 +138,6 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-}
-
-.header-top img{
-
-    max-width: 21.18em;
-
-}
-
-.menu{
-
-    width: 100%;
-    max-width: 50em;
-
-}
-
-.menu ul{
-
-    list-style-type: none;
-
-}
-
-.menu a{
-
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    /* background-color: palegoldenrod; */
-    padding: 0.9em 0.66em;
-
-}
-
-.menu a:hover{
-
-    background-color: red;
-
-}
-
-#menu-bars{
-
-    display: none;
 
 }
 
@@ -373,6 +412,7 @@ img{
 
 }
 
+
 .bloco-news2{
 
     width: 95%;
@@ -454,7 +494,7 @@ img{
 
 .text-bloco p{
 
-    font-size: 14.2px;
+    font-size: 13.5px;
 
 }
 
@@ -721,8 +761,42 @@ img{
 
     }
 
+    .content-tabela{
+
+        display: none;
+
+    }
+
     .content-news{
-        display: unset;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .news-news{
+
+        width: 100%;
+
+    }
+
+    .content-news p{
+
+        font-size: 12px;
+
+    }
+
+    .links-footer{
+
+        margin: auto;
+
+    }
+
+    .sociais{
+
+        margin: auto;
+
     }
 
 }
@@ -731,6 +805,131 @@ img{
 
 @media screen and (max-width: 47.93em){
     
+    body{
+        background-color: var(--background);
+    }
+    /* Menu */
+    .logo{
+        width: 12em;
+        margin-left:3em;
+        justify-content:space-between;
+    }
+
+    .hamburger{
+        display: block;
+        z-index: 999;
+       
+        }
+    
+    .menu{
+        position:fixed;
+        top: 0;
+        right:-100%;
+        margin:0;
+        height:100vh;
+        background-color: var(--background);
+        flex-direction: column;
+        padding: 100px 20px;
+        width: 100%;
+        max-width: 250px;
+        transition: 0.5s ease;;
+    }
+
+    .menu.active{
+        right: 0;
+       margin-right: 30px;
+    }
+
+
+    .banner-text{
+
+        font-size: 8px;
+
+    }
+    
+    .banner{
+
+        margin-top: 90px;
+
+    }
+
+    .games-coming{
+
+        display: none;
+
+    }
+
+    .content-about img{
+
+        display: none;
+
+    }
+
+    .content-about{
+
+        align-items: center;
+        justify-content: space-around;
+        display: flex;
+    }
+
+    .games2{
+
+        height: 100px;
+
+    }
+
+    .bloco-news1 img{
+
+        width: 100%;
+
+    }
+
+    .bloco-news2 img{
+
+        width: 100%;
+
+    }
+
+    .content-news p{
+
+        font-size: 11px;
+
+    }
+
+    .games{
+
+        height: 80px;
+
+    }
+
+    .links-footer{
+
+        margin: 20px;
+        flex-direction: column;
+
+    }
+
+    .logo-rodape{
+
+        width: 30%;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    .sociais{
+
+        
+
+    }
+
+    .siga-nos{
+
+        flex-direction: column;
+        display: flex;
+
+    }
+
 }
 
 /* Até 576px */
